@@ -1,0 +1,4 @@
+1) On commence par initialiser le projet avec 'npm init react-app (nom de l'appli)' par exemple npm init react-app my-app.
+2) On fait un 'npm install' pour installer les dépendences de base et 'npm start' pour lancer le serveur. On va souvent modifier App.js qui est la page principale de l'application.
+3) Pour avoir une structure logique du projet on crée souvent des dossiers (assets, components, etc...).
+4) Pour utiliser des routes on installe la dépendence 'react-router-dom' avec 'npm i react-router-dom'.
