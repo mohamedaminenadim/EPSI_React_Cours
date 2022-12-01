@@ -6,28 +6,29 @@ import Form from "../components/Form";
  * d'où l'utilisation du render()
  */
 
- function ListItem(props){
+function ListItem(props) {
     return (
-    <li className={props.key}>
-        {props.value}
-    </li>)
+        <li className={props.key}>
+            {props.value}
+        </li>)
 }
 
 class Contact extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        const number = [1,3,5,2,7]
+        const number = [1, 3, 5, 2, 7]
         this.listItem = number.map(
             (number) => <ListItem
                 key={number.toString()}
-                value={number}/>
-        )}
+                value={number} />
+        )
+    }
 
     render() {
         return (
             <div className="Contact">
                 Votre message ...
-                <Form/>
+                <Form />
             </div>
         )
     }
