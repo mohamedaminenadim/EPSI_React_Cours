@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import MatchList from "../components/MatchList";
 
 const DEFAULT_MATCH = [
     {
@@ -29,6 +30,21 @@ const Reference = () => {
 
     const [info, setInfo] = useState(DEFAULT_MATCH);
 
+    const onDelete = (infoId) => {
+        setInfo((curr) => curr.filter((info) => info.id != infoId))
+
+    }
+
+    const matchList = info.map((info) => {
+        return (<>
+            <button className="delete" onClick={() => onDelete(info.id)}>
+                Delete match {info.name}
+            </button>
+            <MatchList name={info.name} content={info.score} />
+        </>
+        );
+    })
+
     const newScore = () => {
         // console.log("Render", score);
         setScore((curr) => curr + 1)
@@ -45,6 +61,7 @@ const Reference = () => {
             {score}
             <br />
             <button onClick={newScore}></button>
+            {matchList}
         </div>
     );
 }

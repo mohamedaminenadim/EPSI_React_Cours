@@ -1,0 +1,9 @@
+.itemMatch {
+    display: inline-block;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 5px 15px;
+    padding: 5px;
+    background-color: rgba(50, 50, 50, .4);
+}
